@@ -11,13 +11,14 @@ public class LeetCode200 {
         int m = grid.length;
         int n = grid[0].length;
         for (int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
+            for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1') {
                     res++;
                     backTract(grid, i, j);
                 }
             }
         }
+        return res;
     }
     void backTract(char[][] grid, int i, int j) {
         int m = grid.length;
